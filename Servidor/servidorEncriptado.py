@@ -29,9 +29,9 @@ while True:
             seccure.decrypt_file('/home/secru/Documentos/Paper/Sockets/Servidor/lista.enc',  '/home/secru/Documentos/Paper/Sockets/Servidor/lista',  privada)
             archivo = open('lista','r')
             for line in archivo.readlines():
-                  print 'entre AL READLINESSS'
+                  print 'Leyendo lista blanca'
                   if line.strip() == ipRemota:
-                        print 'ES IGUAL LA IP'
+                        print 'IP Validada'
                         ipValida=True
                         break
             archivo.close()
@@ -41,7 +41,6 @@ while True:
                   registros.registrar('Servidor',ipRemota,'Conexion Aceptada')
                   recibido = wrapedSocket.read()  
                   print 'Recibi'
-                  print 'IP VALIDA SEGUNDA', ipValida
                   split= recibido.split('---')
                   firmaCliente= split[1]
                   print 'FIRMA CLIENTE',firmaCliente
