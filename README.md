@@ -2,5 +2,5 @@
 
 ### Librerias requeridas:  
 
-*PyCrypto  
-*Seccure  
+* PyCrypto  
+* Seccure  
