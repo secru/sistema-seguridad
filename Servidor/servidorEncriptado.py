@@ -31,7 +31,7 @@ while True:
             for line in archivo.readlines():
                   print 'entre AL READLINESSS'
                   if line.strip() == ipRemota:
-                        print 'ES IGUAL LA IPPPP'
+                        print 'ES IGUAL LA IP'
                         ipValida=True
                         break
             archivo.close()
@@ -49,7 +49,7 @@ while True:
                   registros.registrar('Servidor',ipRemota,'Clave Publica Recibida')
                   print seccure.verify(cliPublica, firmaCliente, cliPublica)
                   if seccure.verify(cliPublica, firmaCliente, cliPublica):
-                        print 'emtro al if'
+                        print 'Firma Clave Publica Verificada'
                         registros.registrar('Servidor',ipRemota,'Firma Clave Publica Verificada')
                         llaves = encriptador.llaveAES+'---'+encriptador.llaveMAC
                         print llaves
