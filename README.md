@@ -1,7 +1,7 @@
 +Sistema de seguridad para intercambio de mensajes entre raspberrys.
 +==========
 +
-+Librerías requeridas:
++Librerias requeridas:
 +--------------------
 +
 ++PyCrypto
