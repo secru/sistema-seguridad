@@ -21,7 +21,7 @@ class Seguridad:
 		return cifrador.encrypt(pad(msg))
 		
 	def desencriptar(self,msgen):
-		decipher = AES.new(self.llaveAES,AES.MODE_CFB,self.iv)		
+		decipher = AES.new(self.llaveAES,AES.MODE_OFB,self.iv)		
 		return unpad(decipher.decrypt(msgen))
 		
 	def generarMAC(self,msg):

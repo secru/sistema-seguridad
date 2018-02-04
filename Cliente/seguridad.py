@@ -17,12 +17,12 @@ class Seguridad:
 		self.llaveMAC = MAC
 
 	def encriptar(self,msg):
-		cifrador = AES.new(self.llaveAES,AES.MODE_CFB,self.iv)
-		return cifrador.encrypt(msg)
+		cifrador = AES.new(self.llaveAES,AES.MODE_OFB,self.iv)
+		return cifrador.encrypt(pad(msg))
 		
 	def desencriptar(self,msgen):
-		decipher = AES.new(self.llaveAES,AES.MODE_CFB,self.iv)		
-		return decipher.decrypt(msgen)
+		decipher = AES.new(self.llaveAES,AES.MODE_OFB,self.iv)		
+		return unpad(decipher.decrypt(msgen))
 		
 	def generarMAC(self,msg):
 		m = hmac.new(self.llaveMAC,msg,hashlib.sha256)
